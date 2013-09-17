@@ -1,6 +1,6 @@
 class virtualbox::package {
 
-  package  { $virtualbox::package_name:
+  package  { $virtualbox::packages:
     ensure  => $virtualbox::ensure,
     # require => Apt::Source['virtualbox']
   }
