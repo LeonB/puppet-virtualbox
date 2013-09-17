@@ -18,14 +18,14 @@ class virtualbox::params {
 
   $packages = $::operatingsystem ? {
     default => [
-      'virtualbox', 
+      'virtualbox',
       'virtualbox-dkms',
       'virtualbox-qt',
       'virtualbox-dkms'
     ]
   }
 
-  $repository_release = $lsbdistcodename
+  $repository_release = $::lsbdistcodename
 
   $enabled = true
 
