@@ -14,14 +14,19 @@
 #
 class virtualbox::params {
 
-	### Application related parameters
+  ### Application related parameters
 
-	$package_name = $::operatingsystem ? {
-		default => 'virtualbox'
-	}
+  $packages = $::operatingsystem ? {
+    default => [
+      'virtualbox', 
+      'virtualbox-dkms',
+      'virtualbox-qt',
+      'virtualbox-dkms'
+    ]
+  }
 
-	$repository_release = $lsbdistcodename
+  $repository_release = $lsbdistcodename
 
-	$enabled = true
+  $enabled = true
 
 }
