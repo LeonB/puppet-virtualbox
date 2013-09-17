@@ -21,7 +21,7 @@ class virtualbox::params {
       'virtualbox',
       'virtualbox-dkms',
       'virtualbox-qt',
-      'virtualbox-dkms'
+      'virtualbox-guest-additions-iso'
     ]
   }
 
